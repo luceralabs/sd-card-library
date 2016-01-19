@@ -193,11 +193,12 @@ class Sd2Card {
   void error(uint8_t code) {errorCode_ = code;}
   uint8_t readRegister(uint8_t cmd, void* buf);
   uint8_t sendWriteCommand(uint32_t blockNumber, uint32_t eraseCount);
-  void chipSelectHigh(void);
-  void chipSelectLow(void);
   void type(uint8_t value) {type_ = value;}
   uint8_t waitNotBusy(uint16_t timeoutMillis);
   uint8_t writeData(uint8_t token, const uint8_t* src);
   uint8_t waitStartBlock(void);
+ protected:
+  void chipSelectHigh(void);
+  void chipSelectLow(void);
 };
 #endif  // Sd2Card_h
