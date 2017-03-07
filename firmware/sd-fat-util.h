@@ -37,9 +37,9 @@
 #ifndef PGM_P
 #define PGM_P const char*
 #endif
-#ifndef prog_uchar
-typedef const unsigned char  prog_uchar;
-#endif
+// #ifndef prog_uchar
+// typedef const unsigned char  prog_uchar;
+// #endif
 #ifndef prog_short
 typedef const unsigned short prog_short;
 #endif
@@ -98,7 +98,7 @@ static int FreeRam(void) {
  * %Print a string in flash memory to the serial port.
  *
  * \param[in] str Pointer to string stored in flash memory.
-*/ 
+*/
 /*
 #ifndef SerialPrint_P
 #define SerialPrint_P(str) { \
@@ -113,7 +113,7 @@ static int FreeRam(void) {
  *
  * \param[in] str Pointer to string stored in flash memory.
 */
-/* 
+/*
 #ifndef SerialPrintln_P
 #define SerialPrintln_P(str) { \
   SerialPrint_P(str); \
